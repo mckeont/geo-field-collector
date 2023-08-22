@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title>Geo-Field Collector</title>
+ <meta charset="utf-8" />
+ <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+     integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+     crossorigin="" />
+ <link rel="stylesheet" href="https://unpkg.com/leaflet-control-geocoder/dist/Control.Geocoder.css" />
+ <link rel="stylesheet" href="css/bootstrap.css" />
+<style>
+
+.sidebar {float: right; width:100%;; font-size: 15px;border: solid;background-color: #f0f8ff;  opacity: .9;}
+
+.column{float: left; width: 23%; margin: 10px 10px 15px 35px;}
+.main-heading {font-size: 15px; margin: 0px 0px 0px 40px;}
+.button {width: 170px; height: 60px;margin-top: 30px;border: solid;border-color: black;border-width: 4px;border-radius: 0%; background-color: #ADD8E6; font-size: 1.355em;}
+.fonty {font-size: 1.545em; margin: 0px 30px 10px 15px;/* 30px/16=1.875em */}
+</style>
+</head>
+<body>
+<div class="sidebar">
+<font color="#001C5F"><center><h2 id="main-heading" >Click map for coordinates</h2></center></font>
+
+   <form method="post" action="process.php">
+        <div class="column fonty">
+          Title: <br><input type="text" name="name" id="name"><br>
+          Location:<br><input type="text" name="location" id="location"><br>
+          Latitude:<br> <input type="number" step="any" name="latitude" id="latitude"> <br>
+          Longitude:<br> <input type="number" step="any" name="longitude" id="longitude"> <br>
+        </div>
+          <div class="column">
+            <div><center> <img src="images/DLC logo_colored.png" alt="DLC Logo" style="width:45%"> </center></div>
+          </div>
+        <div class="column fonty">
+          Comment:<br><input type="text" name="comment" id="comment"><br>
+          Creation Date:<br><input type="date" name="cdate" id = "cdate"><br>
+          <input class ="button" type="submit" name = "save" value = "submit">
+        </div>
+
+    </form>
+</div>
+
+ <!-- MAP -->
+ <div id="map" style="z-index: -1; position: fixed; right: 0; left: 0px; top: 0px; bottom: 0px "></div>
+ <!-- JS IMPORTS -->
+ <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js" integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA==" crossorigin=""></script>
+ <script src="https://unpkg.com/leaflet-control-geocoder/dist/Control.Geocoder.js"></script>
+ <script src= "js/jquery-2.2.0.js"></script>
+ <script src= "js/bootstrap.js"></script>
+ <script src= "http://leaflet.github.io/Leaflet.heat/dist/leaflet-heat.js"></script>
+ <script src='https://npmcdn.com/@turf/turf/turf.min.js'></script>
+ <script src= "js/setup.js"></script>
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script>
+ <script src= "js/main.js"></script>
+
+</body>
+</html>
