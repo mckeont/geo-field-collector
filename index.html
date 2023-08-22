@@ -35,6 +35,11 @@ body {
     width: 100%;
     margin: 10px 0;
 }
+ .form-column {
+            display: flex;
+            flex-direction: column;
+            margin: 10px 0;
+        }
 
 .button {
     width: 100%;
@@ -88,27 +93,24 @@ input[type="date"] {
 <body>
 <div class="container">
     <div class="sidebar">
-        <font color="#001C5F"><center><h2 id="main-heading" >Geo-Field Collector</h2></center></font>
-        <font color="#001C5F"><center><h5 >Click map for coordinates</h5></center></font>
-
+        <!-- ... your sidebar content ... -->
         <form method="post" action="process.php" onsubmit="sConsole(event)">
-            <div class="column fonty">
+            <!-- First column of form fields -->
+            <div class="form-column">
                 Title: <br><input type="text" name="name" id="name"><br>
                 Location:<br><input type="text" name="location" id="location"><br>
-                Latitude:<br> <input type="number" step="any" name="latitude" id="latitude"> <br>
-                Longitude:<br> <input type="number" step="any" name="longitude" id="longitude"> <br>
+                Comment:<br><input type="text" name="comment" id="comment"><br>
             </div>
 
-            <div class="column fonty">
-                Comment:<br><input type="text" name="comment" id="comment"><br>
+            <!-- Second column of form fields -->
+            <div class="form-column">
+                Latitude:<br> <input type="number" step="any" name="latitude" id="latitude"> <br>
+                Longitude:<br> <input type="number" step="any" name="longitude" id="longitude"> <br>
                 Creation Date:<br><input type="date" name="cdate" id="cdate"><br>
                 <input class="button" type="submit" name="save" value="submit">
             </div>
         </form>
     </div>
-
- 
-    <!-- MAP -->
     <div id="map"></div>
 </div>
 <!-- JS IMPORTS -->
