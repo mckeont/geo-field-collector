@@ -89,7 +89,7 @@ input[type="date"] {
         <font color="#001C5F"><center><h2 id="main-heading" >Geo-Field Collector</h2></center></font>
         <font color="#001C5F"><center><h5 >Click map for coordinates</h5></center></font>
 
-        <form method="post" action="process.php">
+        <form method="post" action="process.php" onsubmit="sConsole(event)">
             <div class="column fonty">
                 Title: <br><input type="text" name="name" id="name"><br>
                 Location:<br><input type="text" name="location" id="location"><br>
@@ -100,7 +100,7 @@ input[type="date"] {
             <div class="column fonty">
                 Comment:<br><input type="text" name="comment" id="comment"><br>
                 Creation Date:<br><input type="date" name="cdate" id="cdate"><br>
-                <input class="button" type="submit" name="save" value="submit">
+                <input class="button" type="submit" name="save" value="submit">s
             </div>
 
         </form>
