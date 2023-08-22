@@ -15,6 +15,11 @@ body { margin: 0; padding: 0; font-family: Arial, sans-serif;}
     position: relative;
     width: 100%;
 }
+ @media (max-width: 768px) { /* Adjust the breakpoint as needed */
+    .sidebar {
+        height: 50%; /* Adjust the height to your preference */
+    }
+}
 
 .sidebar {
     position: fixed;
@@ -27,7 +32,9 @@ body { margin: 0; padding: 0; font-family: Arial, sans-serif;}
     padding: 20px;
     box-sizing: border-box;
     z-index: 2;
+    height: 100%; /* Adjust the height to 100% */
 }
+
 
 .column {  width: 100%;  margin: 10px 0;}
 .main-heading {  font-size: 24px;  margin-bottom: 10px;}
