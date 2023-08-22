@@ -22,13 +22,14 @@ body {
     height: 100vh;
 }
 
-.sidebar {
-    background-color: #f0f8ff;
-    opacity: 0.9;
-    padding: 20px;
-    box-sizing: border-box;
-    flex: 0 0 30%; /* Take up 50% of the height */
-}
+  .sidebar {
+            background-color: #f0f8ff;
+            opacity: 0.9;
+            padding: 20px;
+            box-sizing: border-box;
+            flex: 0 0 30%;
+            overflow-y: auto; /* Add scrolling if content overflows */
+        }
 
 .column {
     width: 100%;
@@ -100,9 +101,8 @@ input[type="date"] {
             <div class="column fonty">
                 Comment:<br><input type="text" name="comment" id="comment"><br>
                 Creation Date:<br><input type="date" name="cdate" id="cdate"><br>
-                <input class="button" type="submit" name="save" value="submit">s
+                <input class="button" type="submit" name="save" value="submit">
             </div>
-
         </form>
     </div>
 
